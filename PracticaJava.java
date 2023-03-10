@@ -2,6 +2,8 @@
 
 package practicaJava1;
 
+import java.time.LocalDateTime;
+
 public class Practica {
 
 	// 1 escribir un metodo para encontrar el area de un triangulo a partir de 3 lados ingresados
@@ -48,6 +50,8 @@ public class Practica {
 		//System.out.println(true || false || true && !true && !false);
 		primerProblema(15, 8, 13);
 		segundoProblema(7.5);
+		tercerProblema();
+		
 	}
 	
 	static void primerProblema(double pLado1, double pLado2, double pLado3) {
@@ -89,6 +93,13 @@ public class Practica {
 		
 		System.out.println("Problema 2 - El area del circulo con radio: "+pRadio+" es igual a: "+resultadoArea);
 		System.out.println("Problema 2 - La circunferencia de un circulo con radio: "+pRadio+" es igual a: "+resultadoCircunferencia);
+	}
+	
+	static void tercerProblema() {
+		/*3 escribir un metodo que myuestre popr consola la hora del sistema
+		 * utilizar e investigar la libreria de java
+		 */
+		System.out.println("Problema 3 - La hora del sistema es "+LocalDateTime.now());
 	}
 
 	
