@@ -2,6 +2,7 @@
 
 package practicaJava1;
 
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 
 public class Practica {
@@ -52,6 +53,7 @@ public class Practica {
 		segundoProblema(7.5);
 		tercerProblema();
 		cuartoProblema(100);
+		quintoProblema(5);
 		
 	}
 	
@@ -112,6 +114,36 @@ public class Practica {
 		double hora = segundos/3600;
 		
 		System.out.println("Problema 4 - "+segundos+" segundos, equivalen a "+minutos+" minutos o "+hora+" horas");
+	}
+	
+	static void quintoProblema(double pRadio) {
+		// 5 Escribir un metodo para encontrar el volumen de una esfera dado el radio
+	    double radio = pRadio;
+	    //double cons43 = 4d/3d; 
+	    
+	    DecimalFormat df = new DecimalFormat("#.##");
+	    double volumen = 4d/3d*Double.valueOf(df.format( Math.PI))*(Math.pow(radio, 3));
+	    //System.out.println(cons43);
+	    System.out.println("Problema 5 - El volumen de una esfera con radio: "+radio+" es de "+volumen+" unidades cubicas");
+	}
+	    
+	
+	static void sextoProblema() {
+		
+	    // 6 Escribir un metodo para encontrar el volumen de un cono a dado el radio y la altura
+	    
+	    
+	}
+	
+	static void septimoProblema() {
+		
+	    // 7 Encontrar el area superficial de un cubo dado un lado a
+
+	}
+	
+	static void octavoProblema() {
+		
+	    // 8 Escribir un metodo para descubrir si un año ingresado es bisiesto o no
 	}
 
 	
