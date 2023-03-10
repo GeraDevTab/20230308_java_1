@@ -55,6 +55,7 @@ public class Practica {
 		cuartoProblema(100);
 		quintoProblema(5);
 		sextoProblema(8, 18);
+		septimoProblema(3);
 		
 	}
 	
@@ -140,9 +141,14 @@ public class Practica {
 	    System.out.println("Problema 6 - El volumen de un cono con radio: "+radio+" es igual a "+volumen+" unidades cubicas");
 	}
 	
-	static void septimoProblema() {
+	static void septimoProblema(double pLado) {
+		// 7 Encontrar el area superficial de un cubo dado un lado a
+		double lado = pLado;
 		
-	    // 7 Encontrar el area superficial de un cubo dado un lado a
+		double areaCubo = 6d*Math.pow(lado, 2);
+		
+		System.out.println("Problema 7 - El area superficial de un cubo, del cual uno de sus lados mide: "+lado+" es igual a "+areaCubo+" unidades cuadradas");
+		
 
 	}
 	
