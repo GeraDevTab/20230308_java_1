@@ -40,28 +40,55 @@ public class Practica {
 	
 	// 15. Escribir un metodo para encontrar el factorial de un numero sin loops
 	
-	static void primerMetodo(int Numero12) {
-		System.out.println(Numero12);
-	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//primerMetodo(11);
 		//System.out.println(true || false || true && !true && !false);
+		primerProblema(15, 8, 13);
 		segundoProblema(7.5);
 	}
 	
+	static void primerProblema(double pLado1, double pLado2, double pLado3) {
+		/* 1 escribir un metodo para encontrar el area de un triangulo a partir de 3 lados ingresados
+		revisar si es un triangulo valido
+		para validar si es un triangulo se debe aplicar teorema de desigualdad del 
+		triangulo (la suma de dos lados es mayor que el 3er lado)
+		formula para semiperimetro s = (a + b + c)/2
+		formula para area a partir del semiperimetro =  raiz cuadrada de Semiperimetro * (semiperimetro - a)(semiperimetro - b)(semiperimetro - c)
+		*/
+		double lado1 = pLado1;
+		double lado2 = pLado2;
+		double lado3 = pLado3;
+		if(lado1+lado2>lado3 && lado1+lado3>lado2 && lado2+lado3>lado1) {
+			System.out.println("Problema 1 - Los valores ingresados: "+lado1+", "+lado2+", "+lado3+" corresponden a un triangulo valido");
+			double semiperimetro = (lado1 + lado2 + lado3)/2;
+			//System.out.println(lado1);
+			//System.out.println(lado2);
+			//System.out.println(lado3);
+			//System.out.println(semiperimetro);
+			double areaTriangulo = Math.sqrt(semiperimetro * ((semiperimetro-lado1)*(semiperimetro-lado2)*(semiperimetro-lado3)));
+			System.out.println("Problema 1 - El area del triangulo es: "+areaTriangulo+" unidades cuadradas");
+		}
+		else {
+			System.out.println("Problema 1 - Los valores ingresados no corresponden a un triangulo válido");
+		}
+	}
+	
+	
 	static void segundoProblema(double pRadio) {
-	/*2 escribir un metodo para encontrar el area y la circunferencia de un circulo dado el radio
-	 utilizar PI de la libreria de Java
-	 formula para circunferencia de un circulo es: "2r*PI"
-	  */
-	double pi = Math.PI;
-	double radio = pRadio;
-	double resultadoArea  = (radio*radio)*pi;
-	double resultadoCircunferencia = 2*pi*radio;
-	System.out.println("Problema 2 - El area del circulo con radio: "+pRadio+" es igual a: "+resultadoArea);
-	System.out.println("Problema 2 - La circunferencia de un circulo con radio: "+pRadio+" es igual a: "+resultadoCircunferencia);
+		/*2 escribir un metodo para encontrar el area y la circunferencia de un circulo dado el radio
+		 utilizar PI de la libreria de Java
+		 formula para circunferencia de un circulo es: "2r*PI"
+		*/
+		double pi = Math.PI;
+		double radio = pRadio;
+		double resultadoArea  = (radio*radio)*pi;
+		double resultadoCircunferencia = 2*pi*radio;
+		
+		System.out.println("Problema 2 - El area del circulo con radio: "+pRadio+" es igual a: "+resultadoArea);
+		System.out.println("Problema 2 - La circunferencia de un circulo con radio: "+pRadio+" es igual a: "+resultadoCircunferencia);
 	}
 
 	
