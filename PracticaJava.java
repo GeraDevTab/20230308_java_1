@@ -51,6 +51,7 @@ public class Practica {
 		primerProblema(15, 8, 13);
 		segundoProblema(7.5);
 		tercerProblema();
+		cuartoProblema(100);
 		
 	}
 	
@@ -100,6 +101,17 @@ public class Practica {
 		 * utilizar e investigar la libreria de java
 		 */
 		System.out.println("Problema 3 - La hora del sistema es "+LocalDateTime.now());
+	}
+	
+	static void cuartoProblema(double pSegundos) {
+		// 4 Escribir un metodo que convierta n cantidad de segundos a (hora, minutos, segundos) segun sea el caso
+	    // ej 3600 = "1 hora = 60 min = 3600 seg"
+		double segundos = pSegundos;
+		
+		double minutos = segundos/60;
+		double hora = segundos/3600;
+		
+		System.out.println("Problema 4 - "+segundos+" segundos, equivalen a "+minutos+" minutos o "+hora+" horas");
 	}
 
 	
