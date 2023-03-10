@@ -54,6 +54,7 @@ public class Practica {
 		tercerProblema();
 		cuartoProblema(100);
 		quintoProblema(5);
+		sextoProblema(8, 18);
 		
 	}
 	
@@ -128,11 +129,15 @@ public class Practica {
 	}
 	    
 	
-	static void sextoProblema() {
+	static void sextoProblema(double pRadio, double pAltura) {
 		
 	    // 6 Escribir un metodo para encontrar el volumen de un cono a dado el radio y la altura
+	    double radio = pRadio;
+	    double altura = pAltura;
 	    
+	    double volumen = 1d/3d*Math.PI*(Math.pow(radio, 2))*altura;
 	    
+	    System.out.println("Problema 6 - El volumen de un cono con radio: "+radio+" es igual a "+volumen+" unidades cubicas");
 	}
 	
 	static void septimoProblema() {
