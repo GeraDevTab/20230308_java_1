@@ -4,6 +4,7 @@ package practicaJava1;
 
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
+import java.util.GregorianCalendar;
 
 public class Practica {
 
@@ -56,6 +57,7 @@ public class Practica {
 		quintoProblema(5);
 		sextoProblema(8, 18);
 		septimoProblema(3);
+		octavoProblema(2023);
 		
 	}
 	
@@ -152,9 +154,17 @@ public class Practica {
 
 	}
 	
-	static void octavoProblema() {
+	static void octavoProblema(int pAnio) {
+		// 8 Escribir un metodo para descubrir si un año ingresado es bisiesto o no
+		GregorianCalendar calendario = new GregorianCalendar();
+		if(calendario.isLeapYear(pAnio)) {
+			System.out.println("Problema 8 - El año "+pAnio+" es bisiesto");
+		}
+		else {
+			System.out.println("Problema 8 - El año "+pAnio+" NO es bisiesto");
+			
+		}
 		
-	    // 8 Escribir un metodo para descubrir si un año ingresado es bisiesto o no
 	}
 
 	
