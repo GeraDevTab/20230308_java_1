@@ -167,5 +167,100 @@ public class Practica {
 		
 	}
 
+	static void novenoProblema(int pCantidadDeNumerosPrimos) {
+		// 9. Escribir mostrar en pantalla los primeros 100 numeros primos
+		//int verificacionPar =2;
+		double[] numerosPrimos = new double[pCantidadDeNumerosPrimos];
+		double[] numerosNoPrimos = new double[pCantidadDeNumerosPrimos];
+ 		double inicioPrimos = 1;
+		for(int i=0;i<pCantidadDeNumerosPrimos;i++) {
+			/*if(inicioPrimos%verificacionPar == 0) {
+				System.out.println("El numero "+i+" no es primo");
+				inicioPrimos++;
+			}*/
+			if(inicioPrimos != 1 && inicioPrimos != 2 && (inicioPrimos%3d)==0 && (inicioPrimos%2d)!=0)  {
+				//&& (inicioPrimos%1d)==0 && inicioPrimos%inicioPrimos==1  && 
+			numerosPrimos[i] = inicioPrimos;
+			
+			System.out.println("el numero "+inicioPrimos+" es primo");
+			System.out.println("resultado division"+inicioPrimos%3d);
+			System.out.println((inicioPrimos%2d)!=0);
+			inicioPrimos++;
+			}
+			else {
+				System.out.println("el numero "+inicioPrimos+" no es primo");
+				
+				numerosNoPrimos[i] = inicioPrimos;
+				System.out.println("resultado division"+inicioPrimos%3d);
+				inicioPrimos++;
+				
+			}
+		}
+		
+		System.out.println("los numeros primos "+Arrays.toString(numerosPrimos));
+		System.out.println("el numero NOPRIMOS"+Arrays.toString(numerosNoPrimos));
+	}
+	
+	static void decimoProblema(int num1, int num2) {
+		// 10. Escribir un programa para sumar 2 numeros sin usar operadores aritmeticos
+		
+	        while (num2 != 0) {
+	            int carry = num1 & num2; // Encuentra los bits que se van a llevar
+	            num1 = num1 ^ num2; // Suma los bits sin llevar
+	            num2 = carry << 1; // Lleva los bits al siguiente bit
+	        }
+	        System.out.println("la suma es: "+num1); 
+	    }
+	
+	
+	static void onceavoProblema(int numero) {
+		// 11. Escribir un método para verificar si un numero positivo de 2 digitos es palindromo
+		 if(numero < 10 || numero > 99){
+
+             System.out.println("No es de 2 digitos");
+        }
+            int digito1 = numero / 10;
+            int digito2 = numero % 10;
+
+            System.out.println("El numero "+numero+" Resultado de palindromo: "+(digito1 == digito2));
+	}
+	
+	static void doceavoProblema(int digitos) {
+		// 12. Sin usar loops, escribir un metodo para sumar todos los digitos de un numero donde 99 >= n >= 10
+		 if (digitos < 10 || digitos > 99) {
+	            System.out.println("El numero ingreso no es de dos digitos");
+	        }
+	        int digito1 = digitos / 10; // primer digito
+	        int digito2 = digitos % 10; // segundo digito
+	        System.out.println(digito1 + digito2); // devuelve la suma de los digitos
+	}
+	
+	static void treceavoProblema(String mensaje) {
+		// // 13. Escribir un método para remover espacios en blanco de un String. ej -> "Hola Mundo" -> "HolaMundo"
+		String nuevaCadena = mensaje.replaceAll("\\s", "");
+        System.out.println(nuevaCadena);
+	}
+	
+	static void catorceavoProblema(String mensaje) {
+		// 14. Escribir un método para invertir un String. ej -> "Hola" -> "aloH" --- Sin usar loops
+		String cadenaInvertida = "";
+        for (int x = mensaje.length() - 1; x >= 0; x--) {
+            cadenaInvertida = cadenaInvertida + mensaje.charAt(x);
+            
+        }
+        System.out.println(cadenaInvertida);
+	}
+	
+	static int quinceavoProblema(int factorial) {
+		// 15. Escribir un metodo para encontrar el factorial de un numero sin loops
+		  if (factorial==0) {
+			   return 1;
+		  }
+		  else {
+			   return factorial * quinceavoProblema(factorial-1);
+			   
+			  }
+	}
+
 	
 }          
